@@ -1,6 +1,18 @@
-module.exports = function(api) {
+module.exports = function (api) {
   api.cache(true);
+
   return {
-    presets: ['babel-preset-expo'],
+    presets: ["babel-preset-expo"],
+    plugins: [
+      [
+        "babel-plugin-root-import",
+        {
+          rootPathPrefix: "~",
+          rootPathSuffix: "src",
+        },
+      ],
+      ["inline-dotenv", { path: ".env" }],
+      "react-native-reanimated/plugin",
+    ],
   };
 };
