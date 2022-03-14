@@ -34,6 +34,7 @@ export function Button({
       activeOpacity={0.8}
       disabled={isDisabled}
       accessibilityLabel={title}
+      accessibilityRole="button"
       accessibilityState={{
         busy: loading,
         disabled,
@@ -62,6 +63,7 @@ export function Button({
 
       {loading && (
         <ActivityIndicator
+          accessibilityRole="progressbar"
           color={COLORS.textSecondary}
           style={StyleSheet.absoluteFill}
         />

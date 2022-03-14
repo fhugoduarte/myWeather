@@ -71,6 +71,7 @@ export function WeatherForecastScreen() {
     <ScrollView
       keyboardShouldPersistTaps="never"
       contentContainerStyle={styles.scrollStyle}
+      scrollEnabled={false}
     >
       <LinearGradient
         colors={backgroundColors}

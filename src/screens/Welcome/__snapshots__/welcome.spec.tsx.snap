@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screens | Welcome should render correctly 1`] = `
+<ViewManagerAdapter_ExpoLinearGradient
+  proxiedProperties={
+    Object {
+      "colors": Array [
+        4294950789,
+        4294939525,
+      ],
+      "endPoint": undefined,
+      "locations": undefined,
+      "startPoint": undefined,
+    }
+  }
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+      "padding": 47,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "Inter_700Bold",
+          "fontSize": 63,
+        },
+        Object {
+          "textShadowColor": "#00000090",
+          "textShadowOffset": Object {
+            "height": 1,
+            "width": -1,
+          },
+          "textShadowRadius": 3,
+        },
+        Object {
+          "marginBottom": 24,
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    Discover the Weather
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "Inter_400Regular",
+          "fontSize": 31,
+        },
+        Object {
+          "textShadowColor": "#00000090",
+          "textShadowOffset": Object {
+            "height": 1,
+            "width": -1,
+          },
+          "textShadowRadius": 3,
+        },
+        Object {
+          "marginBottom": 63,
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    Get to know the weather anywhere in the world
+  </Text>
+  <View
+    accessibilityHint="Share your location and see the current weather"
+    accessibilityLabel="Get the weather"
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 35,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingHorizontal": 63,
+        "paddingVertical": 24,
+      }
+    }
+  >
+    <View
+      accessible={false}
+      importantForAccessibility="no"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+          },
+          Object {
+            "opacity": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#444E72",
+              "fontFamily": "Inter_700Bold",
+              "fontSize": 31,
+            },
+            Object {},
+            undefined,
+          ]
+        }
+      >
+        Get the weather
+      </Text>
+    </View>
+  </View>
+</ViewManagerAdapter_ExpoLinearGradient>
+`;

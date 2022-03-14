@@ -55,13 +55,21 @@ export function SearchLocation() {
 
   const [loading, setLoading] = useState(false);
   const [isEmpty, setIsEmpty] = useState(true);
-  const [expanded, toggleExpanded] = useReducer((state) => !state, false);
+  const [expanded, setExpanded] = useState(false);
 
   const shouldClose = expanded && !isEmpty;
 
   useEffect(() => {
     expandAnimation.value = withTiming(+expanded, { duration: 300 });
   }, [expanded]);
+
+  useEffect(() => {
+    const subscription = Keyboard.addListener("keyboardDidHide", () =>
+      setExpanded(false)
+    );
+
+    return () => Keyboard.removeSubscription(subscription);
+  }, []);
 
   useEffect(() => {
     if (!expanded) {
@@ -94,16 +102,20 @@ export function SearchLocation() {
     } finally {
       searchValue.current = "";
       setLoading(false);
-      toggleExpanded();
+      setExpanded(false);
     }
   }, []);
 
   function handleSearch() {
     if (isEmpty) {
-      toggleExpanded();
+      setExpanded(false);
     } else {
       searchByAddress();
     }
+  }
+
+  function toggleExpanded() {
+    setExpanded((state) => !state);
   }
 
   const handleOnChangeText = useCallback((text: string) => {
@@ -118,7 +130,10 @@ export function SearchLocation() {
   }, [expanded]);
 
   return (
-    <TouchableWithoutFeedback onPress={toggleExpanded}>
+    <TouchableWithoutFeedback
+      accessibilityRole="button"
+      onPress={toggleExpanded}
+    >
       <Animated.View style={[styles.content, contentStyle]}>
         <TextInput
           editable={!loading}

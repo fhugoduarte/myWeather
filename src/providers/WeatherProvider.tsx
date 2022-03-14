@@ -54,6 +54,7 @@ export function WeatherProvider({ children }: PropsWithChildren<{}>) {
       setLoading(true);
 
       const coordinates = coords || (await getCurrentCoordinates());
+
       if (coordinates) {
         const { data } = await api.get<IWeather>("weather", {
           params: {

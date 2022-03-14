@@ -78,7 +78,6 @@ export function WeatherIcon({ weatherCode, isDay }: Props) {
 
   return (
     <LottieView
-      testID={weatherGroup}
       ref={ref}
       source={source}
       autoPlay={false}
